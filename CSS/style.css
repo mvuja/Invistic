@@ -112,6 +112,10 @@ nav {
     height 0.3s ease;
 }
 
+.nav-logo-sm{
+    display: none;
+}
+
 nav.sticky{
     background: rgba(0, 0, 0, 0.541);
     height: 90px;
@@ -233,7 +237,7 @@ nav img {
     background-color: rgba(15, 15, 16, 0.9);
     top: 0;
     left: 110vw;
-    padding: 90px 0;
+    padding: 50px 0;
     z-index: 5;
     transition: left 0.5s ease;
 }
@@ -889,6 +893,10 @@ footer p {
         display: none;
     }
 
+    #contact .contact-info {
+        padding: 0px 50px;
+    }
+
     .social-links img{
         width: 25%;
         margin-left: 5px;
@@ -969,6 +977,7 @@ footer p {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
     }
 
     #contact>img{
@@ -977,6 +986,10 @@ footer p {
 
     #contact>*{
         flex-basis: 100%;
+    }
+
+    #contact .contact-info {
+        padding: 30px 50px;
     }
 
     #contact p {
@@ -998,6 +1011,14 @@ footer p {
     .case-btn{
         bottom: 7%;
         right: 50%;
+    }
+
+    .card:hover .black-icon {
+        display: none;
+    }
+    
+    .card:hover .colored-icon {
+        display: block;
     }
 
     .card{
@@ -1049,6 +1070,7 @@ footer p {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        text-align: center;
     }
 
     footer .container>*{
@@ -1058,22 +1080,26 @@ footer p {
     }
 
     .footer-right {
-        flex-basis: 15%;
+        flex-basis: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         margin-bottom: 0!important;
     }
 
     .social-links{
-        width: 50%;
+        width: 100%;
     }
 
     .social-links img{
-        width: 20%;
+        width: 10%;
         margin-right: 20px;
         margin-left: 0;
+    }
+
+    .social-links a:first-child{
+        margin-left: 20px
     }
 }
 
@@ -1134,6 +1160,24 @@ footer p {
         word-break: break-word;
     }
 
+    #hero {
+        background-image: url(../Assets/heroimage.png);
+        height: 900px;
+        background-position: right;
+    }
+
+    #hero .container {
+        height: 900px;
+    }
+
+    .nav-logo{
+        display: none;
+    }
+
+    .nav-logo-sm{
+        display: block;
+        width: 60px;
+    }
 
 
     .card{
@@ -1160,10 +1204,7 @@ footer p {
 
     #purple {
         background-image: url(../Assets/purple-section-mobile.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 1600px;
+        height: 1660px;
     }
 
     #purple .container>img {
@@ -1185,7 +1226,18 @@ footer p {
         padding: 70px 40px;
     }
 
-    .social-links{
-        width: 70%;
+    .social-links img{
+        width: 17%;
+        margin-right: 20px;
+        margin-left: 0;
     }
+
+    .footer-center{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:360px){
+    
 }
