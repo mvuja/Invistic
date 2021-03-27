@@ -378,7 +378,7 @@ nav img {
 }
 
 #case-studies img{
-    width: 99.8%;
+    width: 100.5%;
 }
 
 #case-studies h2 {
@@ -888,7 +888,30 @@ footer p {
 }
 
 
+@media screen and (max-width: 1440px) and (min-width: 1430px){
+    .case-btn{
+        bottom: 10%;
+        right: 26%;
+    }
+}
+
 @media screen and (max-width:1440px){
+
+    #carousel {
+        width: 50vw!important;
+    }
+
+    #case-studies img{
+        width: 100%;
+    }
+
+    .case-study{
+        padding: 100px 80px;
+    }
+    
+    .case-study>*{
+        margin-bottom: 30px;
+    }
 
     #contact .form>* {
         flex-basis: 100%;
@@ -942,8 +965,8 @@ footer p {
         width: 100vw!important;
     }
     .case-btn{
-        bottom: 7%;
-        right: 62.5%;
+        bottom: 3%;
+        right: 66.7%;
     }
 
 
@@ -1018,8 +1041,8 @@ footer p {
 @media screen and (max-width:768px){
 
     .case-btn{
-        bottom: 7%;
-        right: 50%;
+        bottom: 3.5%;
+        right: 55.5%;
     }
 
     .card:hover .black-icon {
@@ -1201,6 +1224,7 @@ footer p {
         bottom: 5%;
         right: 50%;
         transform: translate(50%);
+        width: 70vw;
     }
 
 
@@ -1247,8 +1271,10 @@ footer p {
 }
 
 
-@media screen and (max-width:360px){
-    
+@media screen and (max-width:375px){
+    .case-btn{
+        width: 83vw;
+    }
 }
 
 
