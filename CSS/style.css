@@ -415,11 +415,7 @@ nav img {
 	font-size:80px;
 	color:var(--primary-color);
 	padding:20px!important;
-}
-
-#carousel.owl-carousel .owl-nav button.owl-prev,
-#carousel.owl-carousel .owl-nav button.owl-next{
-	float:left;
+    float:left;
     position: relative;
     margin-right: 100px;
 }
@@ -731,6 +727,24 @@ nav img {
 .btn3 {
     background-color: var(--primary-color);
     padding: 20px 40px;
+    border: 2px solid var(--primary-color);
+    transition: background .3s ease, color .3s ease;
+}
+
+.btn4 {
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+    transition: background .3s ease;
+}
+
+.btn4:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn3:hover {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: #fff;
 }
 
 .black-icon-small {
@@ -913,6 +927,11 @@ footer p {
         margin-bottom: 30px;
     }
 
+    #carousel .owl-nav{
+        top:6%;
+        left:57%;
+    }
+
     #contact .form>* {
         flex-basis: 100%;
     }
@@ -956,6 +975,10 @@ footer p {
     }
 
 
+    #carousel .owl-nav{
+        top:8%;
+        left:55%;
+    }
 
 
     #case-studies {
@@ -1040,9 +1063,21 @@ footer p {
 
 @media screen and (max-width:768px){
 
+    #carousel .owl-nav{
+        top:6%;
+        left:56%;
+    }
+
     .case-btn{
         bottom: 3.5%;
         right: 55.5%;
+    }
+
+
+
+    .grid-item1>p {
+        font-size: 0.9rem!important;
+        font-weight: 800;
     }
 
     .card:hover .black-icon {
@@ -1215,6 +1250,15 @@ footer p {
         width: 60px;
     }
 
+
+    #carousel .owl-nav{
+        top:7%;
+        left:50%;
+    }
+
+    #carousel.owl-carousel .owl-nav button.owl-next{
+        margin-right: 0;
+    }
 
     .card{
         padding: 40px;
