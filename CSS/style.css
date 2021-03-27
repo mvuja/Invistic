@@ -1192,6 +1192,10 @@ footer p {
         word-break: break-word;
     }
 
+    nav .container {
+        width: 85%;
+    }
+
     #hero {
         background-image: url(../Assets/heroimage.png);
         height: 900px;
