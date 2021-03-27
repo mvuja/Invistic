@@ -1227,18 +1227,22 @@ footer p {
         word-break: break-word;
     }
 
+    .nav-menu .container a li{
+        font-size: 2.8rem;
+    }
+
     nav .container {
         width: 85%;
     }
 
     #hero {
         background-image: url(../Assets/heroimage.png);
-        height: 900px;
+        height: 800px;
         background-position: right;
     }
 
     #hero .container {
-        height: 900px;
+        height: 800px;
     }
 
     .nav-logo{
