@@ -11,23 +11,37 @@ $(".nav-menu .container a").on("click", function(){
 })
 
 
-// owl carousel
+// carousel
 
-$(document).ready( () => {
-    $("#carousel").owlCarousel({
-        loop: true,
-        dots: false,
-        nav: true,
-        items: 1,
-        autoplay: false
-    })
-})
+
+const swiperImg = new Swiper('.swiper-container-img', {
+    // slidesPerView: 1,
+    effect:'fade'
+});
+
+const swiper = new Swiper('.swiper-container', {  
+    controller: {
+        control: swiperImg,
+        by: 'container'
+    },
+    spaceBetween: 200,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+
+
+
+
 
 
 // change nav on scroll
 
 $(window).on('scroll', () => {
-    if ($(window).scrollTop()>200) {
+    if ($(window).scrollTop()>20) {
         $('nav').addClass('sticky')
     } else {
         $('nav').removeClass('sticky')
