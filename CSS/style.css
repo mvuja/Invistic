@@ -126,7 +126,7 @@ nav {
 }
 
 nav.sticky{
-    background: rgba(0, 0, 0, 0.541);
+    background: rgba(0, 0, 0, 0.97);
     height: 90px;
 }
 
@@ -243,7 +243,7 @@ nav img {
 .nav-menu {
     position: fixed;
     width: 100%;
-    background-color: rgba(15, 15, 16, 0.9);
+    background-color: rgba(15, 15, 16, 0.96);
     top: 0;
     left: 110vw;
     padding: 50px 0;
@@ -654,7 +654,8 @@ nav img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 1800px;
+    /* height: 1800px; */
+    padding-bottom: 70px;
 }
 
 #purple .container {
@@ -846,15 +847,25 @@ nav img {
 #contact strong {
     position: relative;
 }
+
+#contact strong a {
+    color: #000;
+}
     
 #contact strong::after {
     position: absolute;
     content: "";
     bottom: -10px;
     left: 0;
+    right: 0;
     background: var(--primary-color);
     height: 5px;
-    right: 0;
+    transition: left .3s ease, right .3s ease;
+}
+
+#contact strong:hover::after {
+    left: -8px;
+    right: -8px;
 }
 
 
@@ -894,16 +905,25 @@ footer p {
 }
 
 .links ul>* {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
+
+.links ul li a {
+    margin-bottom: 25px;
+    transition: opacity .2s ease;
+}
+
+.links ul li a:hover{
+    opacity: .7;
+} 
 
 .links ul li:last-child {
     margin-bottom: 0;
 }
 
 .footer-line {
-    width: 50px;
-    height: 4px;
+    width: 60px;
+    height: 3px;
     background-color: var(--primary-color);
     border-radius: 100px;
 }
@@ -922,38 +942,45 @@ footer p {
 
 .social-links img {
     margin-left: 15px;
+    transition: transform .3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1) rotate(-5deg);
 }
 
 
-@media screen and (max-width: 1440px) and (min-width: 1430px){
-    .case-btn{
-        bottom: 10%;
-        right: 26%;
+
+
+
+
+@media screen and (max-width:1750px){
+    .slider{
+        padding: 30px 200px 30px 100px;
+    }
+}
+
+@media screen and (max-width:1620px){
+    .slider{
+        padding: 10px 150px 30px 60px;
+    }
+    .case-dotted{
+        right: -484px;
     }
 }
 
 @media screen and (max-width:1440px){
 
-    #carousel {
-        width: 50vw!important;
+    #services h2{
+        margin-left: 55px;
     }
 
-    #case-studies img{
-        width: 100%;
+    #services p{
+        margin-left: 55px;
     }
 
-    .case-study{
-        padding: 100px 80px;
-    }
-    
-    .case-study>*{
-        margin-bottom: 30px;
-    }
 
-    #carousel .owl-nav{
-        top:6%;
-        left:57%;
-    }
+
 
     #contact .form>* {
         flex-basis: 100%;
@@ -976,7 +1003,13 @@ footer p {
         margin-left: 5px;
     }
 
+    .swiper-container{
+        padding-top: 100px;
+    }
 
+    .slider {
+        padding: 10px 90px 30px 30px;
+    }
 }
 
 
@@ -987,38 +1020,14 @@ footer p {
     #hero .container {
         width: 85%;
     }
-    #hero p {
-        display: none;
-    }
     h1 {
         font-size: 4rem;
     }
-    .hero-line {
-        display: none;
-    }
-
-
-    #carousel .owl-nav{
-        top:8%;
-        left:55%;
-    }
-
 
     #case-studies {
-        grid-template-columns: 1fr;
-    }
-    #carousel {
-        width: 100vw!important;
-    }
-    .case-btn{
-        bottom: 3%;
-        right: 66.7%;
+       flex-direction: column;
     }
 
-
-
-    
-    
 
     
     
@@ -1040,13 +1049,6 @@ footer p {
 
     .card:last-child{
         flex-basis: 100%;
-    }
-
-
-
-
-    #purple {
-        height: 1600px;
     }
 
 
@@ -1087,17 +1089,27 @@ footer p {
 
 @media screen and (max-width:768px){
 
-    #carousel .owl-nav{
-        top:6%;
-        left:56%;
+
+
+    #grid{
+        flex-direction: column;
     }
 
-    .case-btn{
-        bottom: 3.5%;
-        right: 55.5%;
+    .flex-item{
+        padding: 50px 0;
     }
 
+    .flex-item img{
+        width: 31%;
+    }
 
+    .my-gallery{
+        grid-template-areas: 
+            "a c"
+            "b b"
+            "d e"
+        ;
+    }
 
     .grid-item1>p {
         font-size: 0.9rem!important;
@@ -1123,6 +1135,10 @@ footer p {
 
     .card:hover{
         background-color: #fff;
+    }
+
+    #purple{
+        height: 1700px;
     }
 
     #purple .container{
@@ -1195,7 +1211,17 @@ footer p {
 }
 
 
+
 @media screen and (max-width:600px){
+    h1{
+        font-size: 34px;
+        word-break: break-word;
+    }
+    .hero-line{
+        height: 10px;
+        top: 30px;
+    }
+
     #grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1245,10 +1271,39 @@ footer p {
 }
 
 
+@media screen and (max-width:528px){
+    #purple{
+        height: 1700px;
+    }
+
+    .right{
+        bottom: -75%;
+    }
+}
+
+
+
 @media screen and (max-width:425px){
+    .nav-menu .container{
+        padding: 31% 0 50%;
+    }
+
     h1{
-        font-size: 3rem;
+        font-size: 28px;
         word-break: break-word;
+    }
+
+    .hero-line{
+        height: 8px;
+        top: 25px;
+    }
+
+    h2{
+        line-height: 1.2;
+    }
+
+    h3{
+        line-height: 1.2;
     }
 
     .nav-menu .container a li{
@@ -1260,13 +1315,20 @@ footer p {
     }
 
     #hero {
-        background-image: url(../Assets/heroimage.png);
         height: 800px;
-        background-position: right;
+        background-position: -300px;
+    }
+
+    #hero p{
+        font-size: 12px;
     }
 
     #hero .container {
         height: 800px;
+    }
+
+    #hero .container>*{
+        margin: 20px 0;
     }
 
     .nav-logo{
@@ -1279,14 +1341,19 @@ footer p {
     }
 
 
-    #carousel .owl-nav{
-        top:7%;
-        left:50%;
+    #case-studies h2{
+        font-size: 40px;
     }
 
-    #carousel.owl-carousel .owl-nav button.owl-next{
-        margin-right: 0;
+    .case-dotted{
+        right: -517px;
     }
+
+    .slider{
+        padding: 10px 70px 30px 30px;
+    }
+
+
 
     .card{
         padding: 40px;
@@ -1296,24 +1363,26 @@ footer p {
         padding: 150px 30px;
     }
 
-    .case-btn{
-        bottom: 5%;
-        right: 50%;
-        transform: translate(50%);
-        width: 70vw;
-    }
 
 
 
     #services::before{
-        left: -7%;
+        left: -30px;
+    }
+
+    #services h2{
+        margin-left: 25px;
+    }
+
+    #services p{
+        margin-left: 25px;
     }
 
 
 
     #purple {
         background-image: url(../Assets/purple-section-mobile.png);
-        height: 1660px;
+        height: 1600px;
     }
 
     #purple .container>img {
@@ -1323,7 +1392,7 @@ footer p {
     .right {
         right: -20%;
         margin-top: 60px;
-        bottom: -65%;
+        bottom: -70%;
     }
 
 
@@ -1332,7 +1401,7 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 70px 40px;
+        padding: 40px 40px 10px;
     }
 
     .social-links img{
@@ -1346,12 +1415,22 @@ footer p {
     }
 }
 
+@media screen and (max-width:325px){
+    #purple {
+        background-image: url(../Assets/purple-section-mobile.png);
+        height: 1700px;
+    }
 
-@media screen and (max-width:375px){
-    .case-btn{
-        width: 83vw;
+    #purple .container>img {
+        margin-top: -50px;
+    }
+
+    .right {
+        bottom: -58%;
     }
 }
+
+
 
 
 
