@@ -1381,6 +1381,11 @@ footer p {
     }
 
     #services p{
+        margin-left: 30px;
+    }
+
+    
+    #services .card p{
         margin-left: 0px;
     }
 
