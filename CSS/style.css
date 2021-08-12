@@ -126,7 +126,7 @@ nav {
 }
 
 nav.sticky{
-    background: rgba(0, 0, 0, 0.97);
+    background: rgba(0, 0, 0, 0.9);
     height: 90px;
 }
 
@@ -1300,10 +1300,16 @@ footer p {
 
     h2{
         line-height: 1.2;
+        font-size: 36px;
     }
 
     h3{
-        line-height: 1.2;
+        line-height: 1.1;
+        font-size: 36px;
+    }
+
+    .card h4{
+        font-size: 24px;
     }
 
     .nav-menu .container a li{
@@ -1316,7 +1322,6 @@ footer p {
 
     #hero {
         height: 800px;
-        background-position: -300px;
     }
 
     #hero p{
@@ -1337,7 +1342,7 @@ footer p {
 
     .nav-logo-sm{
         display: block;
-        width: 60px;
+        width: 48px;
     }
 
 
@@ -1350,7 +1355,7 @@ footer p {
     }
 
     .slider{
-        padding: 10px 70px 30px 30px;
+        padding: 10px 70px 80px 30px;
     }
 
 
@@ -1367,32 +1372,34 @@ footer p {
 
 
     #services::before{
-        left: -30px;
+        left: -38px;
+        top: -20px;
     }
 
     #services h2{
-        margin-left: 25px;
+        margin-left: 30px;
     }
 
     #services p{
-        margin-left: 25px;
+        margin-left: 0px;
     }
 
 
 
     #purple {
         background-image: url(../Assets/purple-section-mobile.png);
-        height: 1600px;
+        height: 1360px;
+        padding-top: 50px;
     }
 
     #purple .container>img {
-        margin-top: -50px;
+        display: none;
     }
 
     .right {
         right: -20%;
         margin-top: 60px;
-        bottom: -70%;
+        bottom: -80%;
     }
 
 
@@ -1415,10 +1422,27 @@ footer p {
     }
 }
 
-@media screen and (max-width:325px){
+@media screen and (max-width:375px){
     #purple {
-        background-image: url(../Assets/purple-section-mobile.png);
-        height: 1700px;
+        height: 1400px;
+    }
+    .right {
+        bottom: -78%;
+    }
+}
+
+@media screen and (max-width:362px){
+    #purple {
+        height: 1480px;
+    }
+    .right {
+        bottom: -70%;
+    }
+}
+
+@media screen and (max-width:342px){
+    #purple {
+        height: 1650px;
     }
 
     #purple .container>img {
@@ -1426,7 +1450,7 @@ footer p {
     }
 
     .right {
-        bottom: -58%;
+        bottom: -65%;
     }
 }
 
