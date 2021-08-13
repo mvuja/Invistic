@@ -829,6 +829,16 @@ nav img {
     -o-border-radius: 10px;
 }
 
+#contact input,
+#contact textarea{
+    transition: box-shadow .3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus{
+    box-shadow: 0 0 15px #8585852f;
+}
+
 #contact textarea {
     font-family: sans-serif;
     font-size: 1rem;
