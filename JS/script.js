@@ -16,7 +16,8 @@ $(".nav-menu .container a").on("click", function(){
 
 const swiperImg = new Swiper('.swiper-container-img', {
     // slidesPerView: 1,
-    effect:'fade'
+    effect:'fade',
+    allowTouchMove: false,
 });
 
 const swiper = new Swiper('.swiper-container', {  
