@@ -48,3 +48,8 @@ $(window).on('scroll', () => {
         $('nav').removeClass('sticky')
     }
 })
+
+
+// Modal video
+
+$(".js-modal-btn").modalVideo();
