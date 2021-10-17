@@ -11,13 +11,16 @@ $(".nav-menu .container a").on("click", function(){
 })
 
 
-// carousel
-
+// SLIDERS
 
 const swiperImg = new Swiper('.swiper-container-img', {
     // slidesPerView: 1,
     effect:'fade',
     allowTouchMove: false,
+    pagination: {
+        el: '.swiper-pagination-img',
+        type: 'fraction',
+    },
 });
 
 const swiper = new Swiper('.swiper-container', {  
